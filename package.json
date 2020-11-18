@@ -1,0 +1,34 @@
+{
+  "name": "vertex",
+  "version": "1.0.0",
+  "description": "A minimal and light template for technology blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss build src/css/tailwind.css -o public/css/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nothehi/vertex.git"
+  },
+  "keywords": [
+    "minimal blog",
+    "technology template",
+    "html template"
+  ],
+  "author": {
+    "name": "Hossein Nodehi",
+    "email": "nodehi7813@gmail.com",
+    "url": "https://nothehi.ir"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nothehi/vertex/issues"
+  },
+  "homepage": "https://github.com/Nothehi/vertex#readme",
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.7",
+    "tailwindcss": "^2.0.1"
+  }
+}
