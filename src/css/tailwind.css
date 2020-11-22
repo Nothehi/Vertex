@@ -24,3 +24,13 @@
 * your stylesheet by default.
 */
 @tailwind screens;
+
+/**
+* Addentional utilities 
+*/
+@layer utilities {
+  .rtl {
+    direction: rtl;
+    font-family: Vazir !important;
+  }
+}
