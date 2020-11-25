@@ -23,8 +23,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    
+<body class="bg-gray-200">
+    <!-- Header -->
+    <header class="container mx-auto md:mt-4">
+        <!-- Navigation -->
+        <nav
+            class="fixed w-full z-50 h-16 md:h-auto md:static flex items-center p-2 text-gray-900 bg-white md:rounded-lg shadow font-medium capitalize">
+            <!-- Logo -->
+            <div
+                class="flex items-center flex-no-shrink px-2 rtl:border-0 md:rtl:border-l md:rtl:border-r-0 border-0 md:border-r border-gray-300">
+                <a href="#">
+                    <img src="img/logo.png" alt="alt placeholder" class="w-10 -mt-1">
+                </a>
+                <div class="flex flex-col mx-auto ml-4 rtl:mr-2 rtl:ml-0">
+                    <span class="font-semibold text-xl tracking-tight text-primary-700">Vertex</span>
+                    <span class="font-medium text-sm tracking-tight text-black">Technology Mag</span>
+                </div>
+            </div>
+
+            <!-- Menus -->
+            <div class="hidden md:flex">
+                <a href="#"
+                    class="flex items-center px-2 py-1 cursor-pointer hover:bg-gray-200 hover:text-gray-700 text-sm rounded ml-4 rtl:mr-4 rtl:ml-0">
+                    <svg class="w-8 p-2 bg-gray-200 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+                        <line x1="13" y1="8" x2="15" y2="8" />
+                        <line x1="13" y1="12" x2="15" y2="12" />
+                    </svg>
+                    <span class="mx-2">Blog</span>
+                </a>
+
+                <a href="#"
+                    class="flex items-center px-2 py-1 cursor-pointer hover:bg-gray-200 hover:text-gray-700 text-sm rounded ml-4 rtl:mr-4 rtl:ml-0">
+                    <svg class="w-8 p-2 bg-gray-200 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="4" y="13" rx="2" width="5" height="7" />
+                        <rect x="15" y="13" rx="2" width="5" height="7" />
+                        <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+                    </svg>
+                    <span class="mx-2">PodCast</span>
+                </a>
+            </div>
+
+            <!-- Profile -->
+            <div class="flex items-center ml-auto rtl:mr-auto rtl:ml-0 rtl:mr-0 rtl:flex-row-reverse">
+                <!-- Search -->
+                <div class="hidden lg:block relative mr-10">
+                    <input type="search" placeholder="Search"
+                        class="appearance-none border border-grey rounded-lg pl-8 pr-4 py-2 focus:outline-none">
+                    <div class="absolute  top-0 bottom-0 left-0 pl-3 flex items-center justify-center">
+                        <svg class="fill-current text-gray-400 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Mobile Hamberger -->
+                <button class="block md:hidden rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                    <span class="flex items-center cursor-pointer">
+                        <svg class="w-8 p-2 bg-gray-200 rounded-full" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <line x1="4" y1="6" x2="20" y2="6" />
+                            <line x1="4" y1="12" x2="20" y2="12" />
+                            <line x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Dark Mode -->
+                <button class="hidden focus:outline-none rounded-full focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                    <span class="flex items-center cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 p-2 bg-gray-200 rounded-full"
+                            viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 3c0.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Light Mode -->
+                <button class="hidden md:block rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                    <span class="flex items-center cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 p-2 bg-gray-200 rounded-full"
+                            viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Alerts -->
+                <button class="hidden md:block rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                    <span class="flex items-center cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 p-2 bg-gray-200 rounded-full"
+                            viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                            <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- User Actions -->
+                <div class="hidden md:block mx-3 relative">
+                    <div>
+                        <button
+                            class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                            id="user-menu" aria-haspopup="true">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="h-8 w-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="">
+                        </button>
+                    </div>
+
+                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden"
+                        role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your
+                            Profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            role="menuitem">Settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign
+                            out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 </body>
 
 </html>

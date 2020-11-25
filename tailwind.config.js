@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
