@@ -28,7 +28,7 @@
     <header class="container mx-auto md:mt-4">
         <!-- Navigation -->
         <nav
-            class="fixed w-full z-50 h-16 md:h-auto md:static flex items-center p-2 text-gray-900 bg-white md:rounded-lg shadow font-medium capitalize">
+            class="hidden fixed w-full z-50 h-16 md:h-auto md:static md:flex items-center p-2 text-gray-900 bg-white md:rounded-lg shadow font-medium capitalize">
             <!-- Logo -->
             <div
                 class="flex items-center flex-no-shrink px-2 rtl:border-0 md:rtl:border-l md:rtl:border-r-0 border-0 md:border-r border-gray-300">
@@ -88,7 +88,8 @@
                 </div>
 
                 <!-- Mobile Hamberger -->
-                <button class="block md:hidden rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                <button
+                    class="block md:hidden rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
                     <span class="flex items-center cursor-pointer">
                         <svg class="w-8 p-2 bg-gray-200 rounded-full" xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke="currentColor"
@@ -102,7 +103,8 @@
                 </button>
 
                 <!-- Dark Mode -->
-                <button class="hidden focus:outline-none rounded-full focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                <button
+                    class="hidden focus:outline-none rounded-full focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
                     <span class="flex items-center cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 p-2 bg-gray-200 rounded-full"
                             viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -114,7 +116,8 @@
                 </button>
 
                 <!-- Light Mode -->
-                <button class="hidden md:block rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                <button
+                    class="hidden md:block rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
                     <span class="flex items-center cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 p-2 bg-gray-200 rounded-full"
                             viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -128,7 +131,8 @@
                 </button>
 
                 <!-- Alerts -->
-                <button class="hidden md:block rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
+                <button
+                    class="hidden md:block rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 mx-1">
                     <span class="flex items-center cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 p-2 bg-gray-200 rounded-full"
                             viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -167,6 +171,86 @@
             </div>
         </nav>
     </header>
+
+    <!-- Main -->
+    <main class="container mx-auto">
+        <div class="flex flex-row flex-wrap md:pt-8">
+            <div class="hidden lg:block md:block lg:w-2/12 md:w-3/12">
+                <nav class="sticky top-2">
+                    <ul class="relative">
+                        <li>
+                            <button type="button"
+                                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline h-10 bg-white dark:bg-gray-900 rounded-lg shadow text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 transition-all ease-out transition-medium stroke-2 text-primary-700"
+                                    viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                </svg>
+                                <span :class="selected === 0 ? 'text-indigo-600' : 'text-gray-700'"
+                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium text-primary-600">
+                                    Home
+                                </span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button"
+                                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline focus:h-10 focus:bg-white dark:bg-gray-900 rounded-lg focus:shadow focus:text-blue-600">
+                                <svg :class="selected === 1 ? 'text-indigo-400' : 'text-gray-500'"
+                                    class="h-6 w-6 transition-all ease-out transition-medium" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.617 1.076a1 1 0 011.09.217l5.657 5.657a9 9 0 11-13.113.41A1 1 0 017 8.022v2.292a2 2 0 104 0V2a1 1 0 01.617-.924zM13 4.414v5.9A4 4 0 015.212 11.6 7 7 0 1016.95 8.364L13 4.414z" />
+                                </svg>
+                                <span :class="selected === 1 ? 'text-indigo-600' : 'text-gray-700'"
+                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium">
+                                    Popular
+                                </span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button"
+                                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline focus:h-10 focus:bg-white dark:bg-gray-900 rounded-lg focus:shadow focus:text-blue-600">
+                                <svg class="h-6 w-6 transition-all ease-out transition-medium stroke-2"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path
+                                        d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                                </svg>
+                                <span :class="selected === 1 ? 'text-indigo-600' : 'text-gray-700'"
+                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium">
+                                    Most View
+                                </span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button"
+                                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline focus:h-10 focus:bg-white dark:bg-gray-900 rounded-lg focus:shadow focus:text-blue-600">
+                                <svg :class="selected === 4 ? 'text-indigo-400' : 'text-gray-500'"
+                                    class="h-6 w-6 transition-all ease-out transition-medium" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4 5a3 3 0 013-3h10a3 3 0 013 3v16a1 1 0 01-1.447.894L12 18.618l-6.553 3.276A1 1 0 014 21V5zm3-1a1 1 0 00-1 1v14.382l5.553-2.776a1 1 0 01.894 0L18 19.382V5a1 1 0 00-1-1H7z" />
+                                </svg>
+                                <span :class="selected === 4 ? 'text-indigo-600' : 'text-gray-700'"
+                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium">
+                                    Bookmark
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
