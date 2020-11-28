@@ -176,23 +176,16 @@
     <!-- Main -->
     <main class="container mx-auto">
         <div class="flex flex-row flex-wrap md:pt-8">
+            <!-- Side bar -->
             <div class="hidden lg:block md:block lg:w-2/12 md:w-3/12">
                 <nav class="sticky top-2">
-                    <ul class="relative">
+                    <ul class="relative divide-y divide-gray-300">
                         <li>
                             <button type="button"
-                                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline h-10 bg-white dark:bg-gray-900 rounded-lg shadow text-blue-600">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-6 w-6 transition-all ease-out transition-medium stroke-2 text-primary-700"
-                                    viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <polyline points="5 12 3 12 12 3 21 12 19 12" />
-                                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-                                </svg>
-                                <span :class="selected === 0 ? 'text-indigo-600' : 'text-gray-700'"
-                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium text-primary-600">
+                                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline focus:h-10 focus:bg-white dark:bg-gray-900 rounded-lg focus:shadow focus:text-blue-600">
+                                <span class="text-2xl">🏠</span>
+                                <span
+                                    class="ml-2 rtl:mr-2 rtl:ml-0 font-spacemono text-sm font-medium">
                                     Home
                                 </span>
                             </button>
@@ -201,14 +194,9 @@
                         <li>
                             <button type="button"
                                 class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline focus:h-10 focus:bg-white dark:bg-gray-900 rounded-lg focus:shadow focus:text-blue-600">
-                                <svg :class="selected === 1 ? 'text-indigo-400' : 'text-gray-500'"
-                                    class="h-6 w-6 transition-all ease-out transition-medium" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M11.617 1.076a1 1 0 011.09.217l5.657 5.657a9 9 0 11-13.113.41A1 1 0 017 8.022v2.292a2 2 0 104 0V2a1 1 0 01.617-.924zM13 4.414v5.9A4 4 0 015.212 11.6 7 7 0 1016.95 8.364L13 4.414z" />
-                                </svg>
-                                <span :class="selected === 1 ? 'text-indigo-600' : 'text-gray-700'"
-                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium">
+                                <span class="text-2xl">🔥</span>
+                                <span
+                                    class="ml-2 rtl:mr-2 rtl:ml-0 font-spacemono text-sm font-medium">
                                     Popular
                                 </span>
                             </button>
@@ -217,16 +205,8 @@
                         <li>
                             <button type="button"
                                 class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline focus:h-10 focus:bg-white dark:bg-gray-900 rounded-lg focus:shadow focus:text-blue-600">
-                                <svg class="h-6 w-6 transition-all ease-out transition-medium stroke-2"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <circle cx="12" cy="12" r="2" />
-                                    <path
-                                        d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
-                                </svg>
-                                <span :class="selected === 1 ? 'text-indigo-600' : 'text-gray-700'"
-                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium">
+                                <span class="text-2xl">👓</span>
+                                <span class="ml-2 rtl:mr-2 rtl:ml-0 font-spacemono text-sm font-medium">
                                     Most View
                                 </span>
                             </button>
@@ -235,14 +215,8 @@
                         <li>
                             <button type="button"
                                 class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline focus:h-10 focus:bg-white dark:bg-gray-900 rounded-lg focus:shadow focus:text-blue-600">
-                                <svg :class="selected === 4 ? 'text-indigo-400' : 'text-gray-500'"
-                                    class="h-6 w-6 transition-all ease-out transition-medium" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M4 5a3 3 0 013-3h10a3 3 0 013 3v16a1 1 0 01-1.447.894L12 18.618l-6.553 3.276A1 1 0 014 21V5zm3-1a1 1 0 00-1 1v14.382l5.553-2.776a1 1 0 01.894 0L18 19.382V5a1 1 0 00-1-1H7z" />
-                                </svg>
-                                <span :class="selected === 4 ? 'text-indigo-600' : 'text-gray-700'"
-                                    class="ml-2 rtl:mr-2 rtl:ml-0  text-sm font-medium transition-all ease-out transition-medium">
+                                <span class="text-2xl">🔖</span>
+                                <span class="ml-2 rtl:mr-2 rtl:ml-0 font-spacemono text-sm font-medium">
                                     Bookmark
                                 </span>
                             </button>
@@ -251,6 +225,7 @@
                 </nav>
             </div>
 
+            <!-- Content -->
             <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-0 md:gap-5 lg:w-10/12 md:w-9/12 md:pl-4">
                 <div
                     class="lg:rounded-lg md:rounded-lg overflow-hidden shadow transition duration-300 ease-in-out hover:shadow-2xl dark:bg-gray-900 border-gray-600 bg-white">
