@@ -33,4 +33,8 @@
     direction: rtl;
     font-family: Vazir !important;
   }
+  .dark {
+    background-color: #13171f !important;
+    color: #fff !important;
+  }
 }
