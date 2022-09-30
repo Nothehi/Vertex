@@ -2,10 +2,16 @@
   "name": "vertex",
   "version": "1.0.0",
   "description": "A minimal and light template for technology blog",
-  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss build src/css/tailwind.css -o public/css/app.css"
+    "build": "tailwindcss build src/css/tailwind.css -o public/css/app.css",
+    "product": "tailwindcss build src/css/tailwind.css -o public/css/app.css --minify",
+    "watch": "tailwindcss build src/css/tailwind.css -o public/css/app.css --watch"
   },
   "repository": {
     "type": "git",
@@ -13,7 +19,6 @@
   },
   "keywords": [
     "minimal blog",
-    "technology template",
     "html template"
   ],
   "author": {
@@ -25,10 +30,5 @@
   "bugs": {
     "url": "https://github.com/Nothehi/vertex/issues"
   },
-  "homepage": "https://github.com/Nothehi/vertex#readme",
-  "dependencies": {
-    "autoprefixer": "^10.0.2",
-    "postcss": "^8.1.7",
-    "tailwindcss": "^2.0.1"
-  }
+  "homepage": "https://github.com/Nothehi/vertex#readme"
 }
