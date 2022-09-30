@@ -1,8 +1,8 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  purge: [],
   darkMode: 'class', // or 'media' or 'class'
+  content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
       fontFamily: {
@@ -12,18 +12,15 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [
-    plugin(function({ addVariant, e }) {
+    plugin(function ({ addVariant, e }) {
       addVariant('rtl', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
           return `.rtl .${e(`rtl${separator}${className}`)}`
-        }, 
-        {
-          variants: ['responsive'],
-        })
+        },
+          {
+            variants: ['responsive'],
+          })
       })
     }),
   ],
